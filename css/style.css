@@ -765,6 +765,10 @@ top:31px;
   width: 30%;
 }
 /* jquery.html */
+.jquery-header {
+  height: 120px;
+}
+
 .basss img {
   height: 300px;
 }
