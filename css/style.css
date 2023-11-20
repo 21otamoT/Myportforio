@@ -163,6 +163,21 @@ nav a:hover {
 .mv-container {
   position: relative;
   padding: 0 20px;
+  animation: triangle .5s 1s forwards;
+}
+@keyframes triangle {
+  0% {
+    clip-path: polygon(0 0, 0 25%, 25% 0);
+  }
+  25% {
+    clip-path: polygon(0 0, 0 50%, 50% 0);
+  }
+  50% {
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+  }
+  100% {
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  }
 }
 
 .mv-container img {
@@ -397,6 +412,10 @@ nav a:hover {
 
 .jquery-header h1 {
   margin-left: 20px;
+}
+
+.br {
+  display: none;
 }
 
 .jquery-span {
@@ -770,10 +789,19 @@ top:31px;
 }
 
 .basss img {
-  height: 300px;
+  height: auto;
 }
 
 .md img {
-  height: 150px;
+  height: auto;
+}
+
+.br {
+  display: block;
+}
+
+.jquery-span {
+  display: block;
+  font-size: 4vw;
 }
 }
