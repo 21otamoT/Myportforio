@@ -306,6 +306,7 @@ img {
 .page-top {
   font-weight: bold;
   padding: 10px;
+  margin-top: 50px;
   cursor: pointer;
   text-align: center;
   background-color: #4c4c4c;
@@ -725,7 +726,7 @@ font-size: calc(2rem/100vw);
 .openbtn1{
   position:fixed;
   z-index: 9999;/*ボタンを最前面に*/
-  bottom: 20vw;
+  bottom: 25vw;
   right: 50%;
   transform: translateX(50%);
   cursor: pointer;
