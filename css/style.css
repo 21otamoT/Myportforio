@@ -129,8 +129,7 @@ img {
   width: 0;
   height: 3px;
   content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
+  transition: all .3s;
   transform: translateX(-50%);
   background-color: #333;
 }
