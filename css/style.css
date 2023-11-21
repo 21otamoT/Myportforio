@@ -30,7 +30,8 @@ img {
  レイアウト
 ---------------------------------*/
 .wrapper {
-  padding-top: 73px;
+  background-color: transparent;
+  position: relative;
 }
 
 .section {
@@ -70,12 +71,12 @@ img {
 ヘッダー
 ---------------------------------*/
 .header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .header .container {
@@ -93,8 +94,9 @@ img {
   letter-spacing: .05em;
 }
 
-.small {
-  font-size: .5em;
+.header-logo a img {
+  width: 80px;
+  aspect-ratio: 1;
 }
 
 .header-logo a {
@@ -114,12 +116,13 @@ img {
 .gnav-item a {
   position: relative;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-family: 'Zen Kurenaido', sans-serif;
   display: inline-block;
   padding: 5px 0;
   transition: .3s;
   letter-spacing: .05em;
-  color: #333;
+  color: #fff;
+  text-align: center;
 }
 
 .gnav-item a:after {
@@ -132,7 +135,7 @@ img {
   transition: .3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #333;
+  background-color: #fff;
 }
 
 .gnav-item a:hover:after {
@@ -145,25 +148,17 @@ img {
   position: absolute;
   top: -1000px;
 }
-nav a:hover {
+#g-nav ul li a:hover {
   border-bottom: 3px solid #fff;
 }
 
 /*--------------------------------
  メインビジュアル
 ---------------------------------*/
-.mv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  text-align: center;
-}
 
 .mv-container {
   position: relative;
-  padding: 0 20px;
-  animation: triangle .5s forwards;
+  animation: triangle .5s 1s forwards;
 }
 @keyframes triangle {
   0% {
@@ -414,6 +409,10 @@ nav a:hover {
   margin-left: 20px;
 }
 
+.br {
+  display: none;
+}
+
 .jquery-span {
   font-size: 1rem;
 }
@@ -519,9 +518,6 @@ nav a:hover {
   }
 
   /* レイアウト */
-  .wrapper {
-    padding-top: 57px;
-  }
 
   .section {
     padding: 60px 0;
@@ -554,13 +550,6 @@ nav a:hover {
   }
 
   /*  メインビジュアル */
-  .mv {
-    height: 40vh;
-  }
-
-  .mv-container {
-    padding: 0 20px;
-  }
 
   .mv-title {
     font-size: 30px;
@@ -632,6 +621,7 @@ nav a:hover {
   .profile-body p {
     font-size: 14px;
     line-height: 1.7;
+    font-family: 'Zen Kurenaido', sans-serif;
   }
 
   .profile-body p:not(:last-child) {
@@ -712,6 +702,12 @@ nav a:hover {
 
 /*リストのレイアウト設定*/
 
+#g-nav .logo {
+  width: 50vw;
+  height: auto;
+  margin: 30px auto 0;
+}
+
 #g-nav li{
 list-style: none;
 text-align: center; 
@@ -719,22 +715,29 @@ text-align: center;
 
 #g-nav li a{
 color: #fff;
+font-family: 'Zen Kurenaido', sans-serif;
 text-decoration: none;
 padding:10px;
 display: block;
-font-weight: bold;
-font-size: 2rem;
+font-size: calc(2rem/100vw);
 }
 /*========= ボタンのためのCSS ===============*/
 .openbtn1{
   position:fixed;
   z-index: 9999;/*ボタンを最前面に*/
-  top:5px;
-  right: 10px;
+  bottom: 20vw;
+  right: 50%;
+  transform: translateX(50%);
   cursor: pointer;
   width: 50px;
   height:50px;
-  z-index: 9999;
+  border-radius: 50%;
+  background-color: #000;
+  transition: all 1s ease;
+}
+
+.openbtn1.active {
+  background-color: #1ca9e3;
 }
 
 /*×に変化*/  
@@ -745,7 +748,7 @@ font-size: 2rem;
   left: 14px;
   height: 3px;
   border-radius: 2px;
-  background-color: black;
+  background-color: #fff;
   width: 45%;
 }
 
@@ -785,10 +788,19 @@ top:31px;
 }
 
 .basss img {
-  height: 300px;
+  height: auto;
 }
 
 .md img {
-  height: 150px;
+  height: auto;
+}
+
+.br {
+  display: block;
+}
+
+.jquery-span {
+  display: block;
+  font-size: 4vw;
 }
 }
