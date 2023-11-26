@@ -229,13 +229,11 @@ img {
 /*--------------------------------
  Skill
 ---------------------------------*/
-.skils {
-  background-image: url(../img/);
-  background-size: 100%;
-  font-size: 10vw;
-  font-family: 'Zen Kurenaido', serif;
-  position: sticky;
-  z-index: -1;
+.skill {
+  background-image: url(../img/Skils.png);
+  background-size: contain;
+  background-position: center;
+  background-attachment:fixed;
 }
 
 .skill-list {
@@ -281,6 +279,7 @@ img {
   background-image: url(../img/aicon.jpg);
   background-size: contain;
   background-position: 100% 100%;
+  background-attachment: fixed;
 }
 .about::before {
   content: '';
@@ -334,6 +333,8 @@ img {
 .contact {
   text-align: center;
   padding-bottom: 50px;
+  background-image: url(../img/Contact.png);
+  background-size: contain;
 }
 
 .contact-item:not(:last-child) {
