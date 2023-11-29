@@ -5,8 +5,11 @@ $(function(){
     dots: true,
     infinite: true,
     autoplaySpeed: 2000,
-    arrows: false,
+    arrows: true,
   });
+
+  $('.slick-prev').css({left:'10px'});
+  $('.slick-next').css({right:'10px'});
 
   // スクロールしたときにセクションをフェードインさせる
   $(window).scroll(function () {
