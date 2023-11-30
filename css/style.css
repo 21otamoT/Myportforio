@@ -835,6 +835,10 @@ top:31px;
   height: 120px;
 }
 
+.section1 {
+  height: 50vh;
+}
+
 .basss img {
   height: auto;
 }
@@ -851,4 +855,5 @@ top:31px;
   display: block;
   font-size: 4vw;
 }
+
 }
