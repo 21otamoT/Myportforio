@@ -482,17 +482,6 @@ img {
   text-align: center;
 }
 
-/* フェードイン */
-.jquery {
-  opacity: 0;
-  transition: opacity 2s linear,margin-top 1s linear;
-}
-
-.fade-in {
-  margin-top: 100px;
-  opacity: 1;
-}
-
 /* モーダル */
 .modal {
   position: fixed;
@@ -835,8 +824,12 @@ top:31px;
   height: 120px;
 }
 
+.section1 {
+  height: 100vh;
+}
+
 .jquery {
-  height: 70vh;
+  margin: 24px auto 0;
 }
 
 .basss img {

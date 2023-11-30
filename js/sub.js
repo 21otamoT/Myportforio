@@ -17,15 +17,16 @@ $(function(){
     const windowHeight = $(window).height();
     $('.jquery').each(function () {
       const position = $(this).offset().top;
-      if (scrollAmount > position - windowHeight + 100) {
-        $(this).addClass('fade-in');
+      console.log(position);
+      console.log(scrollAmount);
+      if (scrollAmount > position - windowHeight) {
+        $(this).fadeIn();
       }
       else {
-        $(this).removeClass('fade-in');
+         $(this).css({display:'none'});
       }
     });
   });
-
   // Worksの画像をクリックしたときにモーダルで拡大表示する
   $('.md img').click(function () {
     const imgSrc = $(this).attr('src');
