@@ -17,16 +17,15 @@ $(function(){
     const windowHeight = $(window).height();
     $('.jquery').each(function () {
       const position = $(this).offset().top;
-      console.log(position);
-      console.log(scrollAmount);
-      if (scrollAmount > position - windowHeight) {
-        $(this).fadeIn();
-      }
-      else {
-         $(this).css({display:'none'});
+      console.log(`記事のトップ：${position}`);
+      console.log(`スクロールの位置：${scrollAmount}`);
+      console.log(`スクロール位置より小さかったら${position-windowHeight+100}`);
+      if (scrollAmount > position - windowHeight +100) {
+        $(this).addClass('fadeIn');
       }
     });
   });
+  
   // Worksの画像をクリックしたときにモーダルで拡大表示する
   $('.md img').click(function () {
     const imgSrc = $(this).attr('src');

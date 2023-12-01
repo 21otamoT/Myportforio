@@ -449,6 +449,17 @@ img {
   border-left: 5px solid yellow;
 }
 
+.jquery {
+  opacity: 0;
+  margin-top: 0;
+}
+
+.fadeIn {
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: translateY(20%);
+  opacity: 1;
+}
+
 .jquery-header h1 {
   margin-left: 20px;
 }
@@ -521,7 +532,7 @@ img {
 
 /* footer */
 .jquery-footer {
-  margin-top: 30px;
+  margin-top: 500px;
 }
 /*media Queries 767
 ----------------------------------------------------*/
@@ -822,10 +833,6 @@ top:31px;
 /* jquery.html */
 .jquery-header {
   height: 120px;
-}
-
-.section1 {
-  height: 100vh;
 }
 
 .jquery {
