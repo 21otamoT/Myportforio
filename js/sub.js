@@ -46,12 +46,13 @@ $(function(){
 
   // onebook3D
   var books = [
-		['img/books/autoput.jpg','アウトプット大全'], 
+		['img/books/cover.jpg','私の本棚'], 
 		['img/books/nanjihisinigotoku.jpg','汝、星の如く'], ['img/books/senhabokuwoegaku.jpg','線は僕を描く'],
 		['img/books/soragohann.jpg','宙ごはん'], ['img/books/uruunoasagao.jpg','うるうの朝顔'],
     ['img/books/gyal.jpg','鬼強ギャルマインド'], ['img/books/yumewokanaeruzou4.jpg','夢をかなえるゾウ4'],
     ['img/books/programing_book1.jpg','達人プログラマー'], ['img/books/programing_book2.jpg','リーダブルコード'],
+    ['img/books/autoput.jpg','アウトプット大全'], ['img/books/end.jpg','私の本棚'], 
 		];	
 
-  $('#mybook').onebook(books,{skin:['light','dark'], bgDark:'#56998c url(./i/bg.jpg)',bgLight:'#d97f6f url(./i/bg2.jpg)', border:10, cesh:false});
+  $('#mybook').onebook(books,{skin:['light','dark'], bgDark:'#56998c',bgLight:'#d97f6f', border:10, cesh:false});
 });
