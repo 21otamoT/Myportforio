@@ -14,8 +14,8 @@
     <h1>jQueryを使ってできる<br class="br">Webサイトの動き<span class="jquery-span">〜趣味で釣った魚の写真で説明いたします。〜</span></h1>
   </header>
   <main class="jquery-main">
-    <h1 class="title">このように写真を切り替えることができます。</h1>
     <section class="section1">
+      <h1 class="title">このように写真を切り替えることができます。</h1>
       <div class="carousel basss" style="background-color: #ddd;">
         <div><img src="img/bass1.JPG" alt="45cmのbass"></div>
         <div><img src="img/bass2.JPG" alt="20cmのbass"></div>
@@ -23,12 +23,14 @@
       </div>
     </section>
     
-    <h1 class="title">画像をクリックすると拡大表示</h1>
-      <div class="md bass">
-        <img src="img/bass1.JPG" alt="45cmのbass">
-      </div>
+    <section class="section">
+      <h1 class="title">画像をクリックすると拡大表示</h1>
+        <div class="md bass">
+          <img src="img/bass1.JPG" alt="45cmのbass">
+        </div>
+    </section>
 
-    <section class="jquery">
+    <section class="jquery section">
       <h1 class="title">スクロールした時に記事や画像を表示する</h1>
       <img src="./img/bass1.JPG" alt="45cmのbass">
     </section>
@@ -38,6 +40,22 @@
     <img src="" alt="" class="big-img">
     <a href="" class="close-btn">✖</a>
   </div>
+
+  <section class="section section-acordion">
+    <h1 class="title">アコーディオンメニュー</h1>
+    <h1 class="acordion" data-id="acordion1">４５ｃｍのブラックバス</h1>
+    <div id="acordion1">
+      <img src="./img/bass1.JPG" alt="４５ｃｍのブラックバス">
+    </div>
+    <h1 class="acordion" data-id="acordion2">３０ｃｍのブラックバス</h1>
+    <div id="acordion2">
+      <img src="./img/bass3.JPG" alt="４５ｃｍのブラックバス">
+    </div>
+    <h1 class="acordion" data-id="acordion3">２５ｃｍのブラックバス</h1>
+    <div id="acordion3">
+      <img src="./img/bass2.JPG" alt="４５ｃｍのブラックバス">
+    </div>
+  </section>
 
   </main>
   <footer class="footer jquery-footer">

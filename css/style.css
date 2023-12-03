@@ -439,14 +439,19 @@ img {
 .home-link {
   text-align: center;
 }
-/* 下層 : jQueryページ */
-/* header */
+/* =====================
+下層 : jQueryページ
+===================== */
 .jquery-header {
   height: 80px;
   box-shadow: 1px 1px 2px #333;
   display: flex;
   align-items: center;
   border-left: 5px solid yellow;
+}
+
+.jquery-header h1 {
+  margin-left: 20px;
 }
 
 .jquery {
@@ -456,12 +461,8 @@ img {
 
 .fadeIn {
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  transform: translateY(20%);
+  transform: translateY(10%);
   opacity: 1;
-}
-
-.jquery-header h1 {
-  margin-left: 20px;
 }
 
 .br {
@@ -526,16 +527,69 @@ img {
 
 .md img {
   width: 30%;
-  height: 300px;
   cursor: pointer;
 }
 
-/* footer */
+/* ---------------------
+アコーディオンメニュー
+--------------------- */
+.section-acordion {
+  margin: 120px auto 0;
+}
+
+.acordion {
+  text-align: center;
+  background-color: yellow;
+  width: 80%;
+  margin: 12px auto 0;
+  padding: 8px 0;
+  box-shadow: 2px 5px 8px #999;
+  position: relative;
+}
+
+:root {
+  --rotate: -135deg;
+  --y     : 50%;
+}
+
+.acordion::after {
+  content: '';
+  display: inline-block;
+  width: 1vw;
+  aspect-ratio: 1;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(var(--rotate)) translateY(var(--y));
+  position: absolute;
+  inset: 50% 5% auto auto;
+  transition: transform .5s;
+}
+
+.section-acordion div {
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.open {
+  --rotate: 45deg;
+  --y: -50%;
+}
+
+.section-acordion picture img {
+  width: 100%;
+}
+
+
+/* --------------
+footer
+-------------- */
 .jquery-footer {
   margin-top: 500px;
 }
-/*media Queries 767
-----------------------------------------------------*/
+/* -----------------------------------------------------
+media Queries 767
+---------------------------------------------------- */
 @media screen and (max-width: 767px) {
   body {
     font-size: 14px;
@@ -840,10 +894,6 @@ top:31px;
 }
 
 .basss img {
-  height: auto;
-}
-
-.md img {
   height: auto;
 }
 

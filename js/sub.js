@@ -17,9 +17,6 @@ $(function(){
     const windowHeight = $(window).height();
     $('.jquery').each(function () {
       const position = $(this).offset().top;
-      console.log(`記事のトップ：${position}`);
-      console.log(`スクロールの位置：${scrollAmount}`);
-      console.log(`スクロール位置より小さかったら${position-windowHeight+100}`);
       if (scrollAmount > position - windowHeight +100) {
         $(this).addClass('fadeIn');
       }
@@ -39,4 +36,11 @@ $(function(){
     $('.modal').fadeOut();
     return false
   });
+
+  //アコーディオンメニュー
+  $('.acordion').click(function(){
+    let id = $(this).data('id');
+    $(`#${id}`).slideToggle();
+    $(this).toggleClass('open');
+});
 });
