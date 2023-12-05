@@ -294,6 +294,7 @@ img {
 .about .container {
   position: relative;
   inset: auto auto auto 13.88vw;
+  max-width: 1000px;
 }
 .about .container .title {
   text-align: start;
