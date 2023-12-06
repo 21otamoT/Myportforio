@@ -94,6 +94,10 @@ img {
   letter-spacing: .05em;
 }
 
+.logo {
+  width: 80px;
+}
+
 .header-logo a img {
   width: 80px;
   aspect-ratio: 1;
@@ -292,8 +296,8 @@ img {
   clip-path: polygon(0 0,100% 0,0 100%,0 100%);
 }
 .about .container {
-  position: relative;
-  inset: auto auto auto 13.88vw;
+  position: sticky;
+  inset: 0% 0% auto auto;
   max-width: 1000px;
 }
 .about .container .title {
@@ -336,6 +340,8 @@ img {
   padding-bottom: 50px;
   background-image: url(../img/Contact.png);
   background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .contact-item:not(:last-child) {
@@ -455,6 +461,10 @@ img {
   margin-left: 20px;
 }
 
+.section-modal {
+  margin: 20vw auto 0;
+}
+
 .jquery {
   opacity: 0;
   margin-top: 0;
@@ -530,6 +540,10 @@ img {
   width: 30%;
   cursor: pointer;
 }
+
+/* ------------------------
+ブックセクション
+------------------------ */
 
 /* ---------------------
 アコーディオンメニュー
@@ -638,9 +652,15 @@ media Queries 767
   .header .container {
     padding: 15px;
   }
-
+  
   .header-logo {
-    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .header .container .logo {
+    position: fixed;
+    inset: 10px auto auto 30px;
+    width: 60px;
   }
 
   .gnav-item:not(:last-child) {
@@ -660,6 +680,7 @@ media Queries 767
   .mv-title {
     font-size: 30px;
   }
+
   .mv-subtitle {
     font-size: 16px;
     margin-bottom: 20px;
@@ -712,6 +733,10 @@ media Queries 767
   .skill-text {
     font-size: 13px;
     line-height: 1.7;
+  }
+
+  .skill-text a {
+    font-size: 11px;
   }
 
   /* About */
