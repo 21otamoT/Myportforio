@@ -28,7 +28,7 @@ $(function () {
           ];
 
           p.animate(boxMove,{
-            duration: 3000,
+            duration: 5000,
             // direction:"alternate",
             iterations: Infinity,
           });
