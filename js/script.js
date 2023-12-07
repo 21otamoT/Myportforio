@@ -3,7 +3,7 @@ $(function () {
   const boxWidth = box.offsetWidth;
   const boxHeight = box.offsetHeight;
 
-  for(let i =0; i < 20; i++) {
+  for(let i =0; i < 10; i++) {
     // ボックスを作る
     const clieitBox = () => {
       const newBox = document.createElement('p');
@@ -15,24 +15,23 @@ $(function () {
       const pArray = document.querySelectorAll('#cercle p');
 
         pArray.forEach(p => {
-          let randumWidth = Math.random() * boxWidth;
+          let randumWidth = Math.random() * boxWidth-100;
           let randumHeight = Math.random() * boxHeight;
-          p.style.top = randumWidth+'px';
-          p.style.left = randumHeight+'px';
+          p.style.top = randumHeight+'px';
+          p.style.left = randumWidth+'px';
 
           // ボックスにアニメーションをつける
           const boxMove = [
-            {transform: 'translate(20px, 0)'},
-            {transform: 'translate(-20px,0)'},
+            {transform: 'translate(20px, 0) rotate(-360deg)'},
+            {transform: 'translate(-20px,0) rotate(-180deg)'},
+            {transform: 'translate(20px, 0) rotate(0deg)'},
           ];
 
           p.animate(boxMove,{
             duration: 3000,
-            direction:"alternate",
+            // direction:"alternate",
             iterations: Infinity,
-            
           });
-          console.log(`'pWidth'${randumWidth}+'pHeight${randumHeight}`);
         });                         
     };
       clieitBox();
