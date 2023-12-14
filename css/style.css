@@ -216,10 +216,12 @@ img {
   margin-right: 1.58730%;
   margin-bottom: 40px;
   color: #333;
+  transition: transform .3s ease-in-out,opacity .5s ease;
 }
 
 .works-item:hover {
-  opacity: .9;
+  opacity: .7;
+  transform: scale(1.1,1.1);
 }
 
 .works-item:nth-of-type(3n) {
@@ -619,7 +621,7 @@ img {
 footer
 -------------- */
 .jquery-footer {
-  margin-top: 500px;
+  margin-top: 100px;
 }
 /* -----------------------------------------------------
 media Queries 767
@@ -950,5 +952,8 @@ top:31px;
   display: block;
   font-size: 4vw;
 }
+/* #OneBook3d_831056_stage,#OneBook3d_831056_icons_panel {
+  margin-top: 100px;
+} */
 
 }

@@ -17,7 +17,7 @@ $(function(){
     const windowHeight = $(window).height();
     $('.jquery').each(function () {
       const position = $(this).offset().top;
-      if (scrollAmount > position - windowHeight +100) {
+      if (scrollAmount > position - windowHeight +200) {
         $(this).addClass('fadeIn');
       }
     });
