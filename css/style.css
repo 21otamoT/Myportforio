@@ -205,16 +205,40 @@ img {
 /*--------------------------------
  Works
 ---------------------------------*/
+.tabmenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+[data-id="web"],[data-id="desin"],[data-id="app"] {
+  text-align: center;
+  display: inline-block;
+  width: 30%;
+  padding: 12px 16px;
+  border: 1px solid #1ca9e3;
+  border-radius: 10px 10px 0 0;
+}
+
 .works-list {
+  display: none;
+}
+
+.active-menu {
+  background-color: #1ca9e3;
+  color: #fff;
+  font-weight: bold;
+}
+
+.active {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -40px;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .works-item {
   width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
+  margin: 12px 0 0 0;
   color: #333;
   transition: transform .3s ease-in-out,opacity .5s ease;
 }

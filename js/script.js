@@ -5,7 +5,7 @@ $(function () {
 
   for(let i =0; i < 10; i++) {
     // ボックスを作る
-    const clieitBox = () => {
+    const createitBox = () => {
       const newBox = document.createElement('p');
       box.appendChild(newBox);
     };
@@ -34,7 +34,7 @@ $(function () {
           });
         });                         
     };
-      clieitBox();
+      createitBox();
       coordinates();
 }
   //ページ内スクロール
@@ -58,5 +58,15 @@ $(function () {
   $('.openbtn1').on('click',() => {
     $('.openbtn1').toggleClass('active');
     $('#g-nav').toggleClass('active');
+  });
+
+  //タブ切り替え
+  $('.work-menu').on('click',function(e){
+    e.preventDefault();
+    let id = $(this).data('id');
+    $('.work-menu').removeClass('active-menu');
+    $('.works-list').removeClass('active');
+    $(this).addClass('active-menu');
+    $(`#${id}`).addClass('active');
   });
 });
