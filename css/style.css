@@ -413,8 +413,7 @@ img {
 }
 
 .line {
-  text-decoration: underline;
-  color: #1ca9e3;
+  background: linear-gradient(to top,#1ca9e3 10%,transparent 20%,transparent 20%);
 }
 
 .copyright {
@@ -904,13 +903,13 @@ font-size: calc(2rem/100vw);
   width: 50px;
   height:50px;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #1ca9e3;
   transition: all 1s ease;
   display: block;
 }
 
 .openbtn1.active {
-  background-color: #1ca9e3;
+  background-color: blue;
 }
 
 /*×に変化*/  
@@ -939,9 +938,7 @@ top:31px;
 
 .openbtn1.active span:nth-of-type(1) {
   top: 18px;
-  left: 18px;
   transform: translateY(6px) rotate(-45deg);
-  width: 30%;
 }
 
 .openbtn1.active span:nth-of-type(2) {
@@ -951,9 +948,7 @@ top:31px;
 
 .openbtn1.active span:nth-of-type(3){
   top: 30px;
-  left: 18px;
   transform: translateY(-6px) rotate(45deg);
-  width: 30%;
 }
 /* jquery.html */
 .jquery-header {

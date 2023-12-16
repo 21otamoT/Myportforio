@@ -22,9 +22,9 @@ $(function () {
 
           // ボックスにアニメーションをつける
           const boxMove = [
-            {transform: 'translate(20px, 0) rotate(-360deg)'},
-            {transform: 'translate(-20px,0) rotate(-180deg)'},
-            {transform: 'translate(20px, 0) rotate(0deg)'},
+            {transform: 'translate(0,20px) rotate(-360deg)'},
+            {transform: 'translate(0,-20px) rotate(-180deg)'},
+            {transform: 'translate(0,20px) rotate(0deg)'},
           ];
 
           p.animate(boxMove,{
