@@ -265,6 +265,7 @@ img {
 
 .works-img img {
   border: 1px solid #e6e6e6;
+  object-fit: cover;
 }
 
 .works-name {
